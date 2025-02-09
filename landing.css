@@ -1,0 +1,76 @@
+/* Import OCR-B Std Font */
+@import url('https://fonts.googleapis.com/css2?family=OCR-B+Std&display=swap');
+
+/* Apply OCR-B-STD Font Globally */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'OCR-B Std', monospace;
+    background-color: #fde8e8; /* Subtle pastel pink */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #d63384; /* Romantic dark pink for text */
+    text-transform: uppercase; /* Optional: Makes text uppercase for consistency */
+}
+
+/* Login Container */
+.login-container {
+    font-family: 'OCR-B Std', monospace;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Header */
+.login-header {
+    font-family: 'OCR-B Std', monospace;
+    margin-bottom: 20px;
+    font-size: 12px; /* Matches input size */
+    color: #d63384;
+}
+
+/* Input Box */
+.input-box {
+    font-family: 'OCR-B Std', monospace;
+    width: 100%;
+    padding: 2px;
+    font-size: 12px; /* Matches header size */
+    height: 20px; /* Matches button height */
+    border: 2px solid #d63384;
+    background: none;
+    color: #d63384;
+    text-align: center;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+/* Button */
+.view-button {
+    font-family: 'OCR-B Std', monospace;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 12px; /* Matches input size */
+    height: 40px; /* Matches input height */
+    border: 2px solid #d63384;
+    background-color: transparent;
+    color: #d63384;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-button:hover {
+    background-color: #d63384;
+    color: #fff;
+}
+
+/* Error Message */
+.error-message {
+    margin-top: 15px;
+    font-size: 12px;
+    color: red;
+    opacity: 0.8;
+}

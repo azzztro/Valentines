@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=OCR-B+Std&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1><a href="main.html">Cita nuestra :* <3</a></h1>
+        <nav>
+            <a href="food.html">comida</a>
+            <a href="actividades.html">actividades</a>
+            <a href="outfit.html">outfit</a>
+            <a href="mystery.html">???</a>
+            <a href="#" id="view-cart">ver carrito</a>
+        </nav>
+    </header>
+
+    <!-- Food Sections -->
+    <main>
+        <!-- Prices Note -->
+        <p class="price-note">Todos los precios están en BXN = Besos Mexicanos</p>
+
+        <!-- Entradas Section -->
+        <section>
+            <h2>Entradas</h2>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="images/arancini.webp" alt="Arancini balls">
+                    <p>Arancini balls in marinara sauce - $35 BXN</p>
+                    <button onclick="addToCart('Arancini balls', 35)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/tomatosoup.webp" alt="Tomato soup">
+                    <p>Tomato and aubergine soup - $25 BXN</p>
+                    <button onclick="addToCart('Tomato and aubergine soup', 25)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/risotto.jpeg" alt="Creamy risotto">
+                    <p>Creamy mushroom risotto - $30 BXN</p>
+                    <button onclick="addToCart('Creamy mushroom risotto', 30)">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plato Fuerte Section -->
+        <section>
+            <h2>Plato Fuerte</h2>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="images/lasagna.jpeg" alt="Lasagna">
+                    <p>Vegan Lasagna - $50 BXN</p>
+                    <button onclick="addToCart('Vegetarian lasagna', 50)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/ramen.jpeg" alt="Ramen">
+                    <p>Spicy miso ramen - $40 BXN</p>
+                    <button onclick="addToCart('Spicy ramen', 40)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/ramen.jpeg" alt="Ramen">
+                    <p>Spicy miso ramen - $40 BXN</p>
+                    <button onclick="addToCart('Spicy ramen', 40)">Add to cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hidden Cart -->
+    <div id="cart-box" class="hidden">
+        <h2>Total:</h2>
+        <ul id="cart-details"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
