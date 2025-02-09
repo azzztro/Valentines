@@ -82,9 +82,10 @@ h2::after {
 }
 
 .item img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 200px; /* Set desired width for the square */
+    height: 200px; /* Set desired height for the square (same as width) */
+    object-fit: cover; /* Ensures the image is cropped to fill the square */
+    border-radius: 5px; /* Optional: Round corners */
 }
 
 .item p {
@@ -162,4 +163,187 @@ header h1 a:hover {
     100% {
         opacity: 0; /* Fade out completely */
     }
+}
+
+#cart-box {
+    background-color: #fdcccc;
+    border: 1px solid #d0a4a4;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    width: 250px;
+    font-size: 14px; /* Adjusted to match the rest of the text */
+    line-height: 1.4; /* Add better spacing for readability */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+#cart-details li {
+    font-size: 14px; /* Ensure items in the cart are smaller */
+    margin-bottom: 8px;
+}
+
+#cart-box label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#cart-box button {
+    font-family: "OCR-B Std", monospace;
+    margin-top: 10px;
+}
+
+/* Loading Spinner */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f4cccc;
+    border-top: 5px solid #d63384; /* Romantic pink */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading Message */
+#loading-message {
+    font-size: 16px;
+    color: #000;
+}
+
+.receipt-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.receipt-buttons button {
+    background: #f4cccc;
+    border: 1px solid #d63384;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.receipt-buttons button:hover {
+    background: #d9a4a4;
+}
+
+/* Align items and buttons in the cart/receipt */
+#cart-details li {
+    display: flex;
+    justify-content: space-between; /* Ensures items and buttons are spaced evenly */
+    align-items: center; /* Aligns items and buttons vertically */
+    margin-bottom: 8px; /* Spacing between items */
+    font-size: 14px; /* Matches the overall text size */
+    line-height: 1.4; /* Better readability for multi-line text */
+}
+
+/* Style for the remove button */
+#cart-details button {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    margin-left: 10px; /* Add some space between the item text and the button */
+    padding: 2px 5px; /* Adjust padding for consistent button size */
+    background-color: #f4cccc;
+    border: 1px solid #d63384;
+    font-size: 12px; /* Slightly smaller font for buttons */
+    cursor: pointer;
+}
+
+#cart-details button:hover {
+    background-color: #d9a4a4; /* Hover effect */
+}
+
+/* Countdown Container */
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'OCR-B Std', monospace;
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #d63384; /* Romantic pink */
+}
+
+/* Surprise Page */
+.surprise-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'OCR-B Std', monospace;
+}
+
+.surprise-container h1 {
+    font-size: 36px;
+    color: #d63384;
+}
+
+.surprise-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Countdown Container */
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'OCR-B Std', monospace;
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #d63384; /* Romantic pink */
+}
+
+/* Go Back Button */
+#go-back-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #f4cccc;
+    border: 1px solid #d63384;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "OCR-B Std", monospace;
+}
+
+#go-back-button:hover {
+    background: #d9a4a4;
 }

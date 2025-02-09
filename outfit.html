@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=OCR-B+Std&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1><a href="main.html">Cita nuestra :* <3</a></h1>
+        <nav>
+            <a href="food.html">comida</a>
+            <a href="actividades.html">actividades</a>
+            <a href="outfit.html">outfit</a>
+            <a href="mystery.html">???</a>
+            <a href="#" id="view-cart">ver carrito</a>
+        </nav>
+    </header>
+
+    <!-- Outfit Sections -->
+    <main>
+        <!-- Prices Note -->
+        <p class="price-note">Todos los precios están en BXN = Besos Mexicanos</p>
+
+        <!-- Top Section -->
+        <section>
+            <h2>Top</h2>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="images/tedbaker.jpeg" alt="Red shirt">
+                    <p>Camisa vino - $0 BXN</p>
+                    <button onclick="addToCart('Camisa Vino', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/allsaintsblack.jpeg" alt="Sweater">
+                    <p>Camiseta Negra Oversize - $0 BXN</p>
+                    <button onclick="addToCart('Camiseta Negra', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/allsaintsgrey.jpeg" alt="Sweater">
+                    <p>Camiseta Gris Oversize - $0 BXN</p>
+                    <button onclick="addToCart('Camiseta Negra', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/zara.jpeg" alt="Sweater">
+                    <p>Camisa Cafe Tie Dye - $0 BXN</p>
+                    <button onclick="addToCart('Camiseta Negra', 0)">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Section -->
+        <section>
+            <h2>Bottom</h2>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="images/blackdenim.webp" alt="Black jeans">
+                    <p>Denims Negros - $0 BXN</p>
+                    <button onclick="addToCart('Black Denim', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/widedresspants.webp" alt="Skirt">
+                    <p>Pantalones negros baggy - $0 BXN</p>
+                    <button onclick="addToCart('Pantalones Wide Leg', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/denims.jpeg" alt="Skirt">
+                    <p>Denims Azules - $0 BXN</p>
+                    <button onclick="addToCart('Blue Denim', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/blackdresspants.jpeg" alt="Skirt">
+                    <p>Pantalones negros- $0 BXN</p>
+                    <button onclick="addToCart('Pantalones Vestir', 0)">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section>
+            <h2>Accesorios</h2>
+            <div class="items-grid">
+                <div class="item">
+                    <img src="images/gorra.jpeg" alt="Hat">
+                    <p>Fitted cafe - $0 BXN</p>
+                    <button onclick="addToCart('Gorra Cafe', 0)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="images/cadenita.jpeg" alt="Watch">
+                    <p>Cadenita - $0 BXN</p>
+                    <button onclick="addToCart('Cuban link', 60)">Add to cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hidden Cart -->
+<div id="cart-box" class="hidden">
+    <h2>Total:</h2>
+    <ul id="cart-details"></ul>
+
+    <!-- Checkbox for Sexy Time -->
+    <label>
+        <input type="checkbox" id="include-sexy-time"> Incluir sexy time ;)
+    </label>
+
+    <!-- Ordenar Button -->
+    <button id="order-button">Ordenar</button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

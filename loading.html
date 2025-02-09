@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-container">
+        <div class="spinner"></div>
+        <p id="loading-message">Preparando tu cita...</p>
+    </div>
+
+    <script>
+        // Rotate between loading messages
+        const messages = [
+            "Preparando mensajes de amor...",
+            "Agregando muchos besos...",
+            "Envolviendo abrazos...",
+            "Colocando velas romanticas...",
+            "Terminando tu cita ideal..."
+        ];
+
+        let index = 0;
+        setInterval(() => {
+            document.getElementById('loading-message').textContent = messages[index];
+            index = (index + 1) % messages.length; // Rotate through the messages
+        }, 2000); // Change message every 2 seconds
+
+        // Redirect to receipt after 6 seconds
+        setTimeout(() => {
+            window.location.href = "receipt.html";
+        }, 10000); // Adjust delay as needed
+    </script>
+</body>
+</html>

@@ -123,3 +123,69 @@ function showHeartEffect() {
         }, randomSpeed * 1000); // Match animation duration
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const orderButton = document.getElementById('order-button');
+    const sexyTimeCheckbox = document.getElementById('include-sexy-time');
+
+    if (sexyTimeCheckbox) {
+        // Save the checkbox state whenever it's toggled
+        sexyTimeCheckbox.addEventListener('change', () => {
+            localStorage.setItem('sexyTime', sexyTimeCheckbox.checked ? 'Yes' : 'No');
+        });
+    }
+
+    if (orderButton) {
+        orderButton.addEventListener('click', () => {
+            // Redirect to the loading page
+            window.location.href = "loading.html";
+        });
+    }
+});
+
+// Load cart details from localStorage and populate receipt
+document.addEventListener('DOMContentLoaded', () => {
+    const receiptDetails = document.getElementById("receipt-details");
+    const totalCostElement = document.getElementById("total-cost");
+    const sexyTimeElement = document.getElementById("sexy-time");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const sexyTime = localStorage.getItem("sexyTime") || 'No';
+    let totalCost = 0;
+
+    // Populate receipt details
+    cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.item} - ${item.kisses} BXN`;
+        receiptDetails.appendChild(li);
+        totalCost += item.kisses;
+    });
+
+    // Show total cost
+    totalCostElement.textContent = `Total: ${totalCost} BXN`;
+
+    // Display sexy time status
+    sexyTimeElement.textContent = `Include sexy time: ${sexyTime}`;
+
+    // Go Back Button
+    const goBackButton = document.getElementById('go-back-button');
+    goBackButton.addEventListener('click', () => {
+        window.location.href = "main.html"; // Redirect to main page
+    });
+
+    // Save Receipt as Image
+    const saveButton = document.getElementById('save-receipt-button');
+    saveButton.addEventListener('click', saveReceiptAsImage);
+});
+
+// Function to save receipt as an image
+function saveReceiptAsImage() {
+    const orderSummary = document.getElementById('order-summary');
+
+    // Use html2canvas to capture the receipt
+    html2canvas(orderSummary).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'receipt.png'; // Name of the saved image
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+}
